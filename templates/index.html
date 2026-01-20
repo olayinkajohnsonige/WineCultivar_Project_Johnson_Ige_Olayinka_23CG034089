@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wine Cultivar Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>🍷 Wine Cultivar Prediction</h2>
+        <p>Enter the chemical properties to predict the wine origin.</p>
+        
+        <form action="/predict" method="POST">
+            <input type="number" step="0.01" name="alcohol" placeholder="Alcohol (e.g. 13.0)" required>
+            <input type="number" step="0.01" name="malic_acid" placeholder="Malic Acid (e.g. 1.7)" required>
+            <input type="number" step="0.01" name="ash" placeholder="Ash (e.g. 2.3)" required>
+            <input type="number" step="0.1" name="magnesium" placeholder="Magnesium (e.g. 100)" required>
+            <input type="number" step="0.01" name="flavanoids" placeholder="Flavanoids (e.g. 2.0)" required>
+            <input type="number" step="0.1" name="proline" placeholder="Proline (e.g. 780)" required>
+            
+            <button type="submit">Predict Origin</button>
+        </form>
+
+        {% if prediction_text %}
+            <div class="result">
+                {{ prediction_text }}
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

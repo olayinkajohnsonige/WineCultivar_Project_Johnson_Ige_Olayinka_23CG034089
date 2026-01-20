@@ -1,0 +1,6 @@
+Name: Johnson Ige Olayinka
+Matric Number: 23CG034089
+Machine Learning Algorithm Used: Random Forest Classifier
+Model persistence method used: Joblib
+Live URL: (Paste your Render link here once it's ready)
+GitHub repository link: https://github.com/olayinkajohnsonige/WineCultivar_Project_Johnson_Ige_Olayinka_23CG034089
